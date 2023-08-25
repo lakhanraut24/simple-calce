@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+</head>
+
+<body>
+    <!-- <input type="text" id="a" style=" font-size: 25px;height: 40px; width: 110px;" placeholder="Enter no.">
+    <input type="text" id="b" style="font-size: 25px;height: 40px; width: 190px;" placeholder="Enter another no.">
+
+    <br><br>
+    <button style="height: 40px; width: 40px; margin: 10px; margin-left: 40px;" onclick="Calc('+')">+</button>
+    <button style="height: 40px; width: 40px; margin: 10px;" onclick="Calc('-')">-</button>
+    <button style="height: 40px; width: 40px; margin: 10px;" onclick="Calc('*')">*</button>
+    <button style="height: 40px; width: 40px; margin: 10px;" onclick="Calc('/')">/</button><br><br>
+
+    <div id="result"
+        style="font-size: 25px;margin-left: 35px; height: 40px; width: 240px; padding-left: 5px; border-radius: 20px; background-color: rgb(0, 255, 85);">
+        Result:
+    </div><br> -->
+    <div
+        style="background-color:rgb(24, 124, 161); height: 300px; border-radius: 50px;  padding-left: 250px; margin-left: 300px; margin-right: 300px;">
+        <input type="text" id="test"
+            style=" margin: 50px; font-size: 25px;height: 40px; width: 310px; text-align: center; background-color:bisque;"
+            placeholder="enter your value" onkeyup="check()"><br><br>
+
+
+        <div id="result"
+            style=" font-size: 25px;margin-left: 75px; height: 40px; width: 240px; padding-left: 5px; border-radius: 20px;text-align: center;background-color: aquamarine ">
+            Message ⚠️
+        </div>
+
+
+        <script>
+            // function add() {
+
+            //     var a = parseFloat(document.getElementById('a').value);
+            //     var b = parseFloat(document.getElementById('b').value);
+            //     var result = a + b;
+
+            //     document.getElementById('result').textContent = 'Result:' + result;
+            // }
+
+            // function subtract() {
+            //     var a = parseFloat(document.getElementById('a').value);
+            //     var b = parseFloat(document.getElementById('b').value);
+            //     var result = a - b;
+
+            //     document.getElementById('result').textContent = 'Result:' + result;
+            // }
+
+            // function multiply() {
+            //     var a = parseFloat(document.getElementById('a').value);
+            //     var b = parseFloat(document.getElementById('b').value);
+            //     var result = a * b;
+
+            //     document.getElementById('result').textContent = 'Result:' + result;
+            // }
+
+            // function divide() {
+            //     var a = parseFloat(document.getElementById('a').value);
+            //     var b = parseFloat(document.getElementById('b').value);
+
+
+            //     var result = a / b;
+            //     document.getElementById('result').textContent = 'Result:' + result;
+
+            // }
+
+
+            // function Calc(oper) {
+
+            //     var a = parseFloat(document.getElementById('a').value);
+            //     var b = parseFloat(document.getElementById('b').value);
+            //     var result;
+            //     if (oper === '+') {
+            //         result = a + b;
+            //     } else if (oper === '-') {
+            //         result = a - b;
+            //     } else if (oper === '*') {
+            //         result = a * b;
+            //     } else if (oper === '/') {
+            //         result = a / b;
+            //     }
+            //     document.getElementById('result').textContent = 'Result: ' + result;
+            // }
+
+            function check() {
+
+                // console.log(input)
+                var number = document.getElementById("test").value;
+                //    console.log(number);
+                var result = document.getElementById("result");
+                //    console.log(result);
+                if (number % 2 === 0) {
+                    console.log("true")
+                    result.innerHTML = number + " is even."
+                    result.style.backgroundColor = " rgb(34, 211, 99)";
+                } else {
+                    console.log("false")
+                    result.innerHTML = number + " is odd."
+                    result.style.backgroundColor = "rgb(240, 20, 20)";
+                } if (number == "") {
+                    alert("Hello! please write something, check no EVEN or ODD");
+                    result.innerHTML = number + " ⚠️ please write ✒️"
+                    result.style.backgroundColor = " blue"
+                }
+
+
+
+
+            }
+
+            // function arrMul(numArr) {
+            //     let result = [];
+
+            //     numArr.forEach(function (num) {
+            //         num = num * 2;
+            //         result.push(num);
+            //     });
+
+            //     console.log(result);
+            // }
+            // arrMul([1, 2, 3]);
+
+            function array(arr) {
+                let arr1 = arr;
+
+                const result = [];
+                for (let index = 0; index < arr1.length; index++) {
+                    let newres = arr1[index] * 5;
+                    result.push(newres)
+                }
+                return result;
+            }
+            // console.log(array([1,2]))
+        
+           for ( let i = 0; i<= 5; i++){
+            console.log('*'.repeat(i));
+           }
+
+          
+           
+        </script>
+
+
+
+</body>
+
+</html>
